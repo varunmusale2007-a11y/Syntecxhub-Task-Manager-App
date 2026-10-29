@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow — Smart Task Manager | Syntecxhub Internship</title>
+    <meta name="description" content="A modern, responsive Task Management dashboard with local persistence, analytics, filtering, and priority tracking. Built with React for Syntecxhub Internship." />
+    <meta name="theme-color" content="#4f46e5" />
+    <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <!-- Fallback production stylesheet for direct execution without npm -->
+    <link rel="stylesheet" href="./dist/assets/index.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Direct Execution Loader: Allows running the website without npm or Vite dev server -->
+    <script>
+      (function() {
+        var isFile = window.location.protocol === 'file:';
+        var isViteDev = Boolean(window.__vite_plugin_react_preamble_installed__);
+        if (isFile || !isViteDev) {
+          if (window.__TASKFLOW_LOADED__) return;
+          window.__TASKFLOW_LOADED__ = true;
+          var isInsideDist = window.location.pathname.replace(/\\/g, '/').indexOf('/dist/') !== -1;
+          var script = document.createElement('script');
+          script.src = isInsideDist ? './assets/index.js' : './dist/assets/index.js';
+          document.body.appendChild(script);
+        }
+      })();
+    </script>
+    <script type="module" src="./src/main.jsx"></script>
+  </body>
+</html>
