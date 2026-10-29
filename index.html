@@ -6,13 +6,14 @@
     <title>TaskFlow — Smart Task Manager | Syntecxhub Internship</title>
     <meta name="description" content="A modern, responsive Task Management dashboard with local persistence, analytics, filtering, and priority tracking. Built with React for Syntecxhub Internship." />
     <meta name="theme-color" content="#4f46e5" />
-    <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet" />
     <!-- Fallback production stylesheet for direct execution without npm -->
-    <link rel="stylesheet" href="./dist/assets/index.css" />
+    <script type="module" crossorigin src="./assets/index.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index.css">
   </head>
   <body>
     <div id="root"></div>
@@ -31,6 +32,5 @@
         }
       })();
     </script>
-    <script type="module" src="./src/main.jsx"></script>
   </body>
 </html>
